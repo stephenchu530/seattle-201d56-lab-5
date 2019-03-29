@@ -101,7 +101,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  let totalProduct = sumAndMultiply(multArr[0], multArr[1], multArr[2])[1];
+  let totalProduct = 1;
+  for (let i = 0; i < multArr.length; i++) {
+    totalProduct *= multArr[i];
+  }
   return [totalProduct, `The numbers ${multArr} have a product of ${totalProduct}.`]
 }
 
